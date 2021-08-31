@@ -1,0 +1,529 @@
+/***************************************************************************/
+/******************************  Propiedades  ******************************/
+/***************************************************************************/
+
+:root {
+    --bla1:  #feffb5;
+    --bla2:  #fffffe;
+    --bla3:  #ffffff;
+    --roj1:  #9a3232;
+    --roj2:  #441818;
+    --roj3:  #c4302b;
+    --ama1:  #E1AA0C;
+    --ama2:  #85780a;
+    --ama3:  #b4b229;
+    --ama4:  #c39200;
+    --ver1:  #148f58;
+    --ver2:  #092e1d;
+    --ver3:  #116161;
+    --ver4:  #194b19;
+    --azu1:  #18117c;
+    --azu2:  #3d2b7e;
+    --azu3:  #3c3694;
+    --ros1:  #f83073;
+    --neg1:  rgb(46, 36, 36);
+    --fuente1: 'MuseoModerno';
+    --fuente2: 'Mukta';
+}
+
+
+/************************************************************************/
+/******************************  Globales  ******************************/
+/************************************************************************/
+
+* {
+    margin:  0;
+    padding: 0;
+}
+
+html {
+    font-size:  62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--roj1);
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%230d2a58' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color:            var(--bla1);
+    font-size:        16px;
+    font-family:      'MuseoModerno', 'Mukta', Arial, Helvetica, sans-serif;    
+}
+
+
+/**********************************************************************/
+/******************************  Header  ******************************/
+/**********************************************************************/
+
+.header {
+    background-color: var(--ver1);
+    color:            var(--bla1);
+    padding:          1.4rem 4rem;
+    width:            100%;
+    position:         fixed;
+    left:             0;    
+    top:              0;
+    z-index:          100;
+}
+
+.header a {
+    color:           var(--bla1);
+    text-decoration: none;    
+}
+
+.nav-container {
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+}
+
+.navigation ul {
+    margin:     0;
+    padding:    0;
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    display:       block;
+    font-size:     1.6em;
+    padding:       0.5rem 1rem;
+    transition:    all 0.3s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+    background-color: var(--ama3);
+    color:            var(--ver2);
+}
+
+.logo {
+    letter-spacing: 0.1rem;
+    font-size:      2.8em;
+    text-shadow:    4px 4px 3px var(--ver2);
+}
+
+
+/***********************************************************************/
+/******************************  Portada  ******************************/
+/***********************************************************************/
+
+.portada-inicio {
+    background:      url("../img/fondo1.jpg") no-repeat center center/cover;
+}
+
+.portada-proyectos {
+    background:      url("../img/proyectos.jpg") no-repeat center center/cover;
+}
+
+.portada-contacto {
+    background:      url("../img/contacto.jpg") no-repeat center center/cover;
+}
+
+.portada-inicio, .portada-contacto, .portada-proyectos {
+    width:           100%;
+    height:          550px;    
+    padding:         150px;
+    margin-bottom:   25px;
+    display:         flex;
+    flex-direction:  column;
+    align-items:     center;
+    justify-content: flex-start;
+    position:        relative;
+    top:             7.9rem;
+    left:            0;
+    right:           0; 
+}
+
+.portada-inicio a, .portada-contacto a, .portada-proyectos a {
+    color:           var(--ver3);
+    text-decoration: none;
+    transition:    all 0.6s linear;
+}
+
+.portada-inicio h2, .portada-contacto h2, .portada-proyectos h2 {
+    font-size:   3em;
+    position:    relative;
+    top:         10rem;
+    text-shadow: 4px 4px 3px var(--ver2);
+}
+
+.portada-inicio a:hover, .portada-contacto a:hover, .portada-proyectos a:hover {
+    font-size:       2em;
+    color:           var(--ama1);
+    text-decoration: none;
+    position:        relative;
+    top:             -1rem;
+    text-shadow:     5px 5px 2px var(--azu1);
+}
+
+/********************************************************************/
+/******************************  Main  ******************************/
+/********************************************************************/
+
+main{
+    padding-top: 6rem;
+}
+
+.container {
+    width:            85%;
+    border-radius:    8px;
+    font-size:        2.4rem;    
+    max-width:        900px;
+    margin:           4em auto;
+    line-height:      3.6rem;
+    padding:          3em;
+    text-align:       justify;
+    background-color: var(--bla1);
+    color:            var(--ver2);
+    box-shadow:       0.4em 0.4em 0.5em var(--neg1);
+}
+
+.blackjack {
+    width:            85%;
+    font-size:        2.4rem;    
+    max-width:        1100px;
+    margin:           4em auto;
+    line-height:      3.6rem;
+    padding:          3em;
+    text-align:       justify;
+    background-color: var(--azu3);
+    color:            var(--bla1);
+    box-shadow:       0.4em 0.4em 0.5em var(--neg1);
+    border-radius:    8px;
+}
+
+.blackjack h2 {
+    margin-top:  0.3em;
+    font-size:   5em;
+    text-shadow: 0.1em 0.1em 0.05em var(--neg1);
+}
+
+.blackjack a {
+    color:            var(--ama2);
+    font-size:        1em;
+    text-decoration:  none;
+    display:          block;    
+    width:            68%;
+    padding:          2rem;
+    transition:       all 0.3s linear;
+    border-radius:    5px;
+    background-color: var(--azu1);
+    align-items:      center;
+    border-style:     solid;
+    border-color:     var(--ama2);
+}
+
+.blackjack a:hover {
+    background-color: var(--ver2);
+    color:            var(--ama1);
+    border-color:     var(--ama1);
+}
+
+.btnBlackjack {
+    width:       60%;
+    padding:     0;
+    align-items: center;
+    padding:     0 0 0 0;
+    margin:      0 0 1em 0;
+}
+
+.btnBlackjack h3 {  
+    padding:    0;
+    margin:     20px 0 40px 0;  
+    text-align: center;
+}
+
+.baraja {
+    padding:         5em 2em 2em 2em;
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+}
+
+.imagenCarta img{
+    padding:         auto;
+    margin:          auto;
+    width:           70%;
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;    
+    border-radius:   20px;
+    box-shadow:      0.8em 0.8em 0.4em var(--neg1);
+}
+
+.videos {
+    width:            60%;
+    font-size:        2.4rem;    
+    max-width:        1100px;
+    margin:           4em auto;
+    line-height:      3.6rem;
+    padding:          3em;
+    text-align:       justify;
+    background-color: var(--bla2);
+    color:            var(--roj3);
+    box-shadow:       0.4em 0.4em 0.5em var(--neg1);
+    border-radius:    8px;
+    font-weight:      bolder;
+}
+
+.videos h3 {
+    font-size: 2em;
+    margin:    2em 0 0 0;
+}
+
+.video {
+    margin:          2em 0 2em 0;
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+}
+
+.logoyoutube {
+    margin:          0 0 50px 0;
+    color:           var(--roj3);
+    font-size:       250px;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;    
+}
+
+.proyecto-derecho {
+    align-items: center;
+}
+
+.proyecto-derecho h3 {
+    display:          inline;
+    background-color: var(--azu1);
+    padding:          10px;
+    margin:           0;
+    font-size:        2em;
+    position:         relative;
+    top:              60px;
+    left:             65%;
+    border-radius:    8px;
+    box-shadow:       0.3em 0.3em 0.3em var(--neg1);
+}
+
+.cuadro-proyecto-derecho {
+    width:            85%;
+    height:           220px;
+    max-width:        1100px;
+    margin:           4em auto;
+    line-height:      3.6rem;
+    padding:          3em 3em 3em 1em;
+    background-color: var(--ama4);    
+    box-shadow:       0.4em 0.4em 0.5em var(--neg1);
+    border-radius:    8px;   
+    display:          flex;
+    align-items:      center;
+    justify-content:  space-between;    
+}
+
+.imagen-proyecto-derecho {
+    position: relative;
+    top:      0px;    
+}
+
+.imagen-proyecto-derecho img {
+    height:     280px;
+    box-shadow: 0.4em 0.4em 0.5em var(--neg1);
+}
+
+.parrafo-proyecto-derecho {
+    position: relative;
+    width:    45%;
+    right:    10px;
+}
+
+.parrafo-proyecto-derecho p {
+    color:      var(--bla3);
+    text-align: justify;
+}
+
+.parrafo-proyecto-derecho p a {
+    color:     var(--roj1);
+    font-size: 20px;
+    transition:    all 1s linear;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.parrafo-proyecto-derecho p a:hover {
+    color:     var(--azu1);
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.proyecto-izquierdo {
+    align-items: center;
+}
+
+.proyecto-izquierdo h3 {
+    display:          inline;
+    background-color: var(--azu1);
+    padding:          10px;
+    margin:           0;
+    font-size:        2em;
+    position:         relative;
+    top:              60px;
+    left:             14%;
+    border-radius:    8px;
+    box-shadow:       0.3em 0.3em 0.3em var(--neg1);
+}
+
+.cuadro-proyecto-izquierdo {
+    width:            85%;
+    height:           220px;
+    max-width:        1100px;
+    margin:           4em auto;
+    line-height:      3.6rem;
+    padding:          3em 3em 3em 1em;
+    background-color: var(--ama4);    
+    box-shadow:       0.4em 0.4em 0.5em var(--neg1);
+    border-radius:    8px;   
+    display:          flex;
+    align-items:      center;
+    justify-content:  space-between;    
+}
+
+.imagen-proyecto-izquierdo {
+    position: relative;
+    top:      0px;  
+    right:    -25px;   
+}
+
+.imagen-proyecto-izquierdo img {
+    height:     280px;
+    box-shadow: 0.4em 0.4em 0.5em var(--neg1);
+}
+
+.parrafo-proyecto-izquierdo {
+    position: relative;
+    width:    45%;
+    right:    10px;
+}
+
+.parrafo-proyecto-izquierdo p {
+    margin: 0 0 0 45px  ;
+    color:      var(--bla3);
+    text-align: justify;
+}
+
+.parrafo-proyecto-izquierdo p a {
+    color:     var(--roj1);
+    font-size: 20px;
+    transition:    all 1s linear;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.parrafo-proyecto-izquierdo p a:hover {
+    color:     var(--azu1);
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+
+/**********************************************************************/
+/******************************  Social  ******************************/
+/**********************************************************************/
+
+.social{
+    margin: 80px;
+}
+
+.social a {
+    color: var(--bla1);
+}
+
+.social a:hover {
+    color: var(--ama3);
+}
+
+.social p {
+    text-shadow: 8px 8px 3px var(--roj2);
+}
+
+.social p{
+    text-align:    center;
+    font-size:     50px;
+    margin-bottom: 20px;
+}
+
+.links{
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+}
+
+.links a{
+    margin: 0 30px;
+}
+
+.links a i{
+    font-size: 3rem;
+}
+
+
+/****************************************************************************/
+/******************************  Footer Links  ******************************/
+/****************************************************************************/
+
+.footer-links{
+    background: var(--azu2);
+    font-size:  20px;
+    color:      var(--bla1);
+    padding:    35px 0;
+}
+
+.footer-container{    
+    display:               grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:                   10px;
+    align-items:           flex-start;
+    justify-content:       center;
+}
+
+.footer-container ul{
+    margin:     0 auto;
+    list-style: none;
+}
+
+.footer-container ul li{
+    line-height: 2.0;
+}
+
+
+/**********************************************************************/
+/******************************  Footer  ******************************/
+/**********************************************************************/
+
+.footer-container a{
+    color:           var(--bla1);
+    text-decoration: none;
+}
+
+.footer-container a:hover{
+    color:           var(--ama3);
+    text-decoration: none;
+}
+
+.footer {
+    background:     var(--azu2);
+    color:          var(--bla1);
+    font-size:      12px;
+    padding:        20px 0;
+    text-align:     center;
+    padding-bottom: 20px;
+}
